@@ -1,12 +1,12 @@
-i CREATING OUR OWN PRINTF FUNCTION
+CREATING OUR OWN PRINTF FUNCTION
 
-## collaborators
+## Collaborators
 
-# Olayiwola Okanlawon
+Olayiwola Okanlawon
 
-# Oyebode Adetunji
+Oyebode Adetunji
 
-# The printf project is a collaboration between Ogunronbi John and Iheka Olivia, actual students of Software Engineering at Alx School, were a function named printf imitates the actual "printf" command located in the stdio.h library. It contains some of the basic features and functions found in the manual 3 of "printf".
+The printf project is a collaboration between Olayiwola Okanlawon and Oyebode Adetunji, actual students of Software Engineering at Alx School, were a function named printf imitates the actual "printf" command located in the stdio.h library. It contains some of the basic features and functions found in the manual 3 of "printf".
 
 
 
