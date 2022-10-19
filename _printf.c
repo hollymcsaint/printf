@@ -16,13 +16,13 @@ int _printf(const char *format, ...)
 
 	const char *p;
 
-	va_list arguments;
+	va_list valist;
 
 	flags_t flags = {0, 0, 0};
 
 	register int count = 0;
 
-	va_start(arguments, format);
+	va_start(valist, format);
 
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
@@ -48,13 +48,13 @@ int _printf(const char *format, ...)
 
 			count += (pfunc)
 
-				? pfunc(arguments, &flags)
+				? pfunc(valist, &flags)
 
 				: _printf("%%%c", *p);
 		} else
 			count += _putchar(*p);
 	}
 	_putchar(-1);
-	va_end(arguments);
+	va_end(valist);
 	return (count);
 }
