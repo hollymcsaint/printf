@@ -4,16 +4,16 @@
  * print_string - loops through a string and prints
  * every character
  * @l: va_list arguments from _printf
- * @f: pointer to the struct flags that determines
+ * @flg: pointer to the struct flags that determines
  * if a flag is passed to _printf
  * Return: number of char printed
  */
 
-int print_string(va_list l, flags_t *f)
+int print_string(va_list l, flags_t *flg)
 {
 	char *s = va_arg(l, char *);
 
-	(void)f;
+	(void)flg;
 
 	if (!s)
 		s = "(null)";
@@ -23,14 +23,14 @@ int print_string(va_list l, flags_t *f)
 /**
  * print_char - prints a character
  * @l: va_list arguments from _printf
- * @f: pointer to the struct flags that determines
+ * @flg: pointer to the struct flags that determines
  * if a flag is passed to _printf
  * Return: number of char printed
  */
 
-int print_char(va_list l, flags_t *f)
+int print_char(va_list l, flags_t *flg)
 {
-	(void)f;
+	(void)flg;
 	_putchar(va_arg(l, int));
 	return (1);
 }
