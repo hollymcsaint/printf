@@ -6,18 +6,18 @@
  * printed this way: \x, followed by the ASCII code
  * value in hexadecimal (upper case - always 2 characters)
  * @l: va_list arguments from _printf
- * @f: pointer to the struct flags that determines
+ * @flg: pointer to the struct flags that determines
  * if a flag is passed to _printf
  * Return: number of char printed
  */
 
-int print_bigS(va_list l, flags_t *f)
+int print_bigS(va_list l, flags_t *flg)
 {
 	int i, count = 0;
 	char *res;
 	char *s = va_arg(l, char *);
 
-	(void)f;
+	(void)flg;
 
 	if (!s)
 		return (_puts("(null)"));
@@ -43,18 +43,18 @@ int print_bigS(va_list l, flags_t *f)
 /**
  * print_rev - prints a string in reverse
  * @l: argument from _printf
- * @f: pointer to the struct flags that determines
+ * @flg: pointer to the struct flags that determines
  * if a flag is passed to _printf
  * Return: length of the printed string
  */
 
-int print_rev(va_list l, flags_t *f)
+int print_rev(va_list l, flags_t *flg)
 {
 	int i = 0, j;
 
 	char *s = va_arg(l, char *);
 
-	(void)f;
+	(void)flg;
 	if (!s)
 		s = "(null)";
 
@@ -70,19 +70,19 @@ int print_rev(va_list l, flags_t *f)
 /**
  * print_rot13 - prints a string using rot13
  * @l: list of arguments from _printf
- * @f: pointer to the struct flags that determines
+ * @flg: pointer to the struct flags that determines
  * if a flag is passed to _printf
  * Return: length of the printed string
  */
 
-int print_rot13(va_list l, flags_t *f)
+int print_rot13(va_list l, flags_t *flg)
 {
 	int i, j;
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *s = va_arg(l, char *);
 
-	(void)f;
+	(void)flg;
 	for (j = 0; s[j]; j++)
 	{
 		if (s[j] < 'A' || (s[j] > 'Z' && s[j] < 'a') || s[j] > 'z')
@@ -102,13 +102,13 @@ int print_rot13(va_list l, flags_t *f)
 /**
  * print_percent - prints a percent
  * @l: va_list arguments from _printf
- * @f: pointer to the struct flags in which we turn the flags on
+ * @flg: pointer to the struct flags in which we turn the flags on
  * Return: number of char printed
  */
 
-int print_percent(va_list l, flags_t *f)
+int print_percent(va_list l, flags_t *flg)
 {
 	(void)l;
-	(void)f;
+	(void)flg;
 	return (_putchar('%'));
 }
