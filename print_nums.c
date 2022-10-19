@@ -3,20 +3,20 @@
 /**
  * print_int - prints an integer
  * @l: va_list of arguments from _printf
- * @f: pointer to the struct flags determining
+ * @flg: pointer to the struct flags determining
  * if a flag is passed to _printf
  * Return: number of char printed
  */
 
-int print_int(va_list l, flags_t *f)
+int print_int(va_list l, flags_t *flg)
 {
 	int n = va_arg(l, int);
 	int res = count_digit(n);
 
-	if (f->space == 1 && f->plus == 0 && n >= 0)
+	if (flg->space == 1 && flg->plus == 0 && n >= 0)
 		res += _putchar(' ');
 
-	if (f->plus == 1 && n >= 0)
+	if (flg->plus == 1 && n >= 0)
 		res += _putchar('+');
 
 	if (n <= 0)
@@ -29,17 +29,17 @@ int print_int(va_list l, flags_t *f)
 /**
  * print_unsigned - prints an unsigned integer
  * @l: va_list of arguments from _printf
- * @f: pointer to the struct flags determining
+ * @flg: pointer to the struct flags determining
  * if a flag is passed to _printf
  * Return: number of char printed
  */
 
-int print_unsigned(va_list l, flags_t *f)
+int print_unsigned(va_list l, flags_t *flg)
 {
 	unsigned int u = va_arg(l, unsigned int);
 	char *str = convert(u, 10, 0);
 
-	(void)f;
+	(void)flg;
 	return (_puts(str));
 }
 
