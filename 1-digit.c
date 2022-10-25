@@ -5,6 +5,7 @@
  * @params: the parameters struct
  * @ap: the argument pointer
  * Return: void
+ * Author: Olayiwola Okanlawon && Oyebode Adetunji
  */
 
 void init_params(params_t *params, va_list ap)

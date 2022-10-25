@@ -6,6 +6,7 @@
  * @params: the parameters struct
  *
  * Return: bytes printed
+ * Author: Olayiwola Okanlawon && Oyebode Adetunji
  */
 
 int print_hex(va_list ap, params_t *params)

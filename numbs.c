@@ -8,6 +8,7 @@
  * @params: paramater struct
  *
  * Return: string
+ * Author: Olayiwola Okanlawon && Oyebode Adetunji
  */
 
 char *convert(long int num, int base, int flags, params_t *params)

@@ -5,6 +5,7 @@
  * @c: the character to check
  *
  * Return: 1 if digit, 0 otherwise
+ * Author: Olayiwola Okanlawon && Oyebode Adetunji
  */
 
 int _isdigit(int c)

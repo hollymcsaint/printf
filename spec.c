@@ -4,6 +4,7 @@
  * get_specifier - finds the format function
  * @s: string of the format
  * Return: the number of bytes printed
+ * Author: Olayiwola Okanlawon && Oyebode Adetunji
  */
 
 int (*get_specifier(char *s))(va_list ap, params_t *params)
